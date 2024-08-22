@@ -19,6 +19,8 @@ const Stopwatch = lazy(() => import("./pages/admin/apps/stopwatch"));
 const Toss = lazy(() => import("./pages/admin/apps/toss"));
 const NewProduct = lazy(() => import("./pages/admin/management/newproduct"));
 const Shipping = lazy(() => import("./pages/shipping"));
+const Orders = lazy(() => import("./pages/orders"));
+const OrderDetails = lazy(() => import("./pages/order-details"));
 const ProductManagement = lazy(
   () => import("./pages/admin/management/productmanagement")
 );
@@ -40,6 +42,8 @@ const App = () => {
 
           <Route>
             <Route path="/shipping" element={<Shipping />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/order/:id" element={<OrderDetails />} />
           </Route>
 
 
